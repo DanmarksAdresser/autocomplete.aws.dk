@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  div.container
+    h1 AWS 4 Autocomplete
+    div.page-header
+      p.lead AWS 4 Autocomplete er en komponent, som gør det enkelt at implementere adresseindtastning med autocomplete
+
+  div.container
+    div.row
+
+      div.col-md-12
+        h2 Hvad er AWS 4 Autocomplete?
+        p Et centralt element i et it-systems behandling af adresser er indtastning. Derfor skal det selvfølgelig være enkelt at lave en it-løsning, som gør det nemt og hurtigt for slutbrugere at indtaste en gyldig adresse. Til dette har vi lavet en jQuery plugin komponent til at etablere adresse autocomplete funktionalitet i web applikationer. Autocompletekomponenten er en del af <a href='http://aws.dk#AWS4'>AWS Suiten version 4</a>.
+
+        h2 Prøv AWS 4 Autocomplete
+        p Du kan nedenfor prøve forskellige anvendelser af komponenten.
+        form(role='form')
+          fieldset
+            legend Autocomplete af adresse
+            label(for='adresse') Adresse
+            input.form-control(type='text', autocomplete='off', placeholder='vejnavn husnr, etage. dør, postnummer', id='adresse')
+            p Valgt adresse: <span id="adresse-choice"></span>
+          fieldset
+            legend Autocomplete af adresse i København
+            label(for='adresse-kbh') Adresse
+            input.form-control(type='text', autocomplete='off', placeholder='vejnavn husnr, etage. dør, postnummer', id='adresse-kbh')
+            p Valgt adresse: <span id="adresse-kbh-choice"></span>
+          fieldset
+            legend Autocomplete af adgangsadresse
+            label(for='adgangsadresse') Adgangsadresse
+            input.form-control(type='text', autocomplete='off', placeholder='vejnavn husnr, postnummer', id='adgangsadresse')
+            p Valgt adgangsadresse: <span id="adgangsadresse-choice"></span>
+
+        h2 Hvordan bruger man AWS 4 Autocomplete?
+        p For at kunne bruge AWS 4 Autocomplete, skal du have noget erfaring med JavaScript, jQuery og html. Det er ikke mange linjers kode, der skal tilføjes din applikation for at etablere en adresse indtastning med autocomplete. Følg <a href='/guide'>trin for trin guiden</a>.
+
+        h2 Hvad er AWS 4 Autocomplete baseret på?
+        p AWS 4 Autocomplete er baseret på adressedata og -funktionalitet fra <a href='http://dawa.aws.dk'>DAWA</a>, som er en central del af AWS 4. DAWA giver dig programmatisk tilgang til bl.a. adresser, adgangsadresser, vejnavne, supplerende bynavne og postnumre. Reverse geokodning af adgangsadresser. Og meget andet. Hvis dit behov ikke er dækket af AWS 4 Autocomplete, kan du skræddersy adressefunktionalitet ind i din it-løsning ved at anvende AWS 4 DAWA. 
+
+block append scripts
+  script(src="javascripts/script.js")
+
+  script(type='text/javascript').
+    $('#topbar li').removeClass('active');
+    var a= $("#topbar li a[href='home']")[0];
+    var li= $(a).parent().addClass('active');

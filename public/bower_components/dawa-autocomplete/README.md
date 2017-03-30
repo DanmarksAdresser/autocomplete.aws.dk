@@ -8,7 +8,7 @@ afhængigheder end JQuery.
 Du kan se en demo af komponenten på [dawa.aws.dk](http://dawa.aws.dk).
 
 ## Installation
-Komponenten kan installeres via [bower](bower.io):
+Komponenten kan installeres via [bower](http://bower.io):
 ```
 bower install dawa-autocomplete
 ```
@@ -35,7 +35,7 @@ $('#myInput').dawaautocomplete({
   timeout: 10000,
   select: function(event, adresse) {
     // denne funktion bliver kaldt når brugeren vælger en adresse.
-  }
+  },
   error: function(xhr, status, error) {
     // denne funktion bliver kaldt ved fejl
   }

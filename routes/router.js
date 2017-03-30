@@ -16,16 +16,4 @@ router.get('/guide', function(req, res) {
   res.render('guide');
 });
 
-router.get('/wfs', function(req, res) {
-  res.render('wfs');
-});
-
-router.get('/wmts', function(req, res) {
-  res.render('wmts');
-});
-
-router.get('/om', function(req, res) {
-	res.render('om');
-});
-
 module.exports = router;
